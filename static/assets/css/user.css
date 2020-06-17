@@ -1,0 +1,67 @@
+@media (min-width:768px) {
+  .portfolio-block .heading h2 {
+    font-size: 2rem;
+  }
+}
+
+.portfolio-block.skills {
+  border-bottom: 1px solid #ddd;
+  padding-top: 0px;
+}
+
+.portfolio-navbar .logo {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.navbar-dark .navbar-brand, .navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.gradient {
+  background: linear-gradient(120deg,#9bf570,#0ea0ff);
+  color: #fff;
+}
+
+.portfolio-block.block-intro p {
+  margin-left: 45px;
+}
+.port_left{
+  padding-right: 20px;
+  font-size: 3ch;
+}
+.disp{
+  margin-top: 1.3in;
+}
+.view_ln_2{
+  font-size: 2ch;
+}
+
+#proj_desc{
+  width: auto;
+  height: 9in;
+  object-fit: contain;
+  font-size: 4ch;
+  margin-top: .5in;
+  text-align: justify;
+  overflow: scroll;
+  padding-left: 0.5in;
+  padding-right: 0.5in;
+}
+#proj_details{
+  text-align: justify;
+  font-size: 4ch;
+  margin-top: 1in;
+  text-decoration: underline;
+}
+.disp_date{
+  font-size: 6ch;
+  font-family: AppleGothic;
+}
+.disp_head{
+  font-size: 3ch;
+}
+.none{
+}
+

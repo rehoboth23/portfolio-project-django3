@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block projects %}
+<div class="row">
+    {% if query %}
+    {% for object in query %}
+    <div class="col-md-6 col-lg-4">
+        <div class="project-card-no-image">
+            <h2>{{ object.title }} </h2>
+            <h4>({{ object.date }})</h4>
+            <a class="btn btn-outline-primary btn-sm" role="button" href="{% url 'project:view' object.id %}">See More</a>
+            <div class="tags"><a href="#"></a></div>
+        </div>
+    </div>
+    {%endfor%}
+    {% else %}<h1 class="alert-warning">No Featured Project to Display</h1>{%endif%}
+</div>
+{% endblock %}

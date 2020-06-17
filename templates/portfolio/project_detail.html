@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block title %}{{object.title}}{% endblock %}
+
+{% block main %}
+<div class="col-lg-8 col-xl-6 offset-lg-1 offset-xl-2 m-auto">
+    <div class="intro disp">
+        <a {% if object.url %}href="{{object.url}}"{%endif%}}><h1 class="text-center disp_head"><strong>{{object.title}}</h1></a>
+        <p class="text-center m-auto"><span class="date view_ln_2 disp_date"> {{object.date|date:'d/m/Y'}} </span></p>
+        <br>
+        <div>
+        <h2 class="text-center text-uppercase" id="proj_details">Details</h2>
+        <p class="align-content-center" id="proj_desc">{{object.description}}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
