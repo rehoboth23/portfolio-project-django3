@@ -41,7 +41,10 @@ INSTALLED_APPS = [
     # mine
     'blog',
     'portfolio',
+    'todo',
 ]
+
+AUTH_USER_MODEL = 'todo.Todo_User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block nav_link %}href="{% url 'todo:login' %}"{% endblock %}{% block nav_lnk_lb %}Sign In{% endblock %}
+{% block form_label %}Sign Up{% endblock %}
+
+{% block main %}
+ <div class="login-clean">
+    <form method="post">{% csrf_token %}
+        <h2 >Sign Up</h2>
+        <h2 class="sr-only">Signup Form</h2>
+        {% block form %}
+        {{ form.as_p }}
+        {% endblock %}
+        <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Create Account</button></div>
+    </form>
+</div>
+{% endblock %}
