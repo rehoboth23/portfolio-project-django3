@@ -82,9 +82,9 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">Shortened URL:</span>
               </div>
-              <input type="text" class="form-control" aria-label="Large" value = "localhost:8000/{{a.short_url}}" aria-describedby="inputGroup-sizing-sm">
+              <input type="text" class="form-control" aria-label="Large" value = "https://rehoboth23.pythonanywhere.com/{{a.short_url}}" aria-describedby="inputGroup-sizing-sm">
             </div>
-              <a href="{% url 'shorten:copy' a.short_url '1' %}" class="btn btn-outline-primary"><i class="fa fa-copy"></i> Copy</a>
+              <a href="{% url 'copy' a.short_url '1' %}" class="btn btn-outline-primary"><i class="fa fa-copy"></i> Copy</a>
           </form>
         {% endif %}
         {% if b %}
@@ -93,9 +93,9 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">Shortened URL:</span>
             </div>
-            <input type="text" class="form-control" aria-label="Large" value = "localhost:8000/{{b.short_url}}" aria-describedby="inputGroup-sizing-sm">
+            <input type="text" class="form-control" aria-label="Large" value = "https://rehoboth23.pythonanywhere.com/{{b.short_url}}" aria-describedby="inputGroup-sizing-sm">
           </div>
-            <a href="{% url 'shorten:copy' b.short_url '1' %}" class="btn btn-outline-primary"><i class="fa fa-copy"></i> Copy</a>
+            <a href="{% url 'copy' b.short_url '1' %}" class="btn btn-outline-primary"><i class="fa fa-copy"></i> Copy</a>
         </form>
         {% endif %}
       </div>
