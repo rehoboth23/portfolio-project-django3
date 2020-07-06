@@ -45,7 +45,7 @@ def login_user(request):
             context = {
                 'form': Signin_Form
             }
-            return render(request, 'index.html', context)
+            return render(request, 'main.html', context)
 
         else:
             username = request.POST['username']
@@ -121,7 +121,6 @@ class Create_User(generic.CreateView):
 
     def form_valid(self, form):
         self.user = form.save()
-
         return super().form_valid(form)
 
     def get_success_url(self):

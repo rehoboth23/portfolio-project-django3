@@ -23,5 +23,6 @@ urlpatterns = [
     path('', include('portfolio.urls')),
     path('blog/', include('blog.urls')),
     path('todo/', include('todo.urls')),
+    path('shorten/', include('shorter.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

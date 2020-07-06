@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'blog',
     'portfolio',
     'todo',
+    'shorter',
 ]
 
 AUTH_USER_MODEL = 'todo.Todo_User'
