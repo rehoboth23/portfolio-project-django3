@@ -5,7 +5,7 @@ from django.db import models
 class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-    image = models.ImageField(upload_to='portfolio/logo')
+    image = models.ImageField(upload_to='project/logo')
     url = models.URLField(blank=True)
     featured = models.BooleanField(default=False)
     date = models.DateField()
@@ -41,7 +41,7 @@ class Education(models.Model):
     location = models.CharField(max_length=250, blank=True, null=True)
     degree = models.CharField(max_length=250)
     gpa = models.DecimalField(decimal_places=2, max_digits=3)
-    logo = models.ImageField(upload_to="portfolio/logo")
+    logo = models.ImageField(upload_to="education/logo")
     start = models.DateField()
     end = models.DateField(null=True, blank=True)
     activities = models.ManyToManyField(activity, blank=True)
@@ -52,7 +52,7 @@ class Education(models.Model):
 
 class Experience(models.Model):
     institution = models.CharField(max_length=250)
-    logo = models.ImageField(upload_to="portfolio/logo", null=True)
+    logo = models.ImageField(upload_to="experience/logo", null=True)
     start = models.DateField()
     end = models.DateField(null=True, blank=True)
     position = models.CharField(max_length=500)

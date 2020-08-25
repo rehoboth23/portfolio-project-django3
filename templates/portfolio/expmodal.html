@@ -27,7 +27,7 @@
                             const id = "ex"+pre+"bfr"
                             bfr.setAttribute("id", id)
 
-                            bfr.style.backgroundImage = "url({% static object.logo %})"
+                            bfr.style.backgroundImage = "url({{object.logo.url}})"
                             bfr.style.backgroundRepeat = "no-repeat"
                             bfr.style.backgroundSize = "contain"
                             bfr.style.opacity = "0.5"
@@ -68,7 +68,7 @@
                             const id = "ex"+pre+"bfr"
                             bfr.setAttribute("id", id)
 
-                            bfr.style.backgroundImage = "url({% static object.logo %})"
+                            bfr.style.backgroundImage = "url({{object.logo.url}})"
                             bfr.style.backgroundRepeat = "no-repeat"
                             bfr.style.backgroundSize = "contain"
                             bfr.style.opacity = "0.5"
