@@ -20,8 +20,7 @@
 }
 
 .gradient {
-  background: linear-gradient(120deg,#9bf570,#0ea0ff);
-  color: #fff;
+  background-color: #472776;
 }
 
 .portfolio-block.block-intro p {
@@ -63,5 +62,35 @@
   font-size: 3ch;
 }
 .none{
+}
+@media (max-width: 991px) {
+    #social {
+      display: block;
+      background-color: #1f0a47;
+    }
+
+    #socialIcons {
+      width: 100%;
+      display: grid;
+    }
+
+    #socialIcons span {
+      font-size: 1.4rem;
+    }
+
+    #socialIcons .facebook {
+      grid-column-start: 2;
+      grid-column-end: 2;
+    }
+
+    #socialIcons .linkedIn {
+      grid-column-start: 3;
+      grid-column-end: 3;
+    }
+
+    #socialIcons .instagram {
+      grid-column-start: 4;
+      grid-column-end: 4;
+    }
 }
 

@@ -1,17 +1,21 @@
-{% extends 'base.html' %}
-
-
+{% extends 'portfolio/base.html' %}
 {% block title %}{{object.title}}{% endblock %}
-
+{%block extraLink%}
+<li class="nav-item">
+  <a class="nav-link nav-item" href="{% url 'project:projects' %}" id="projects_links"><b class="link-text">Projects</b></a>
+</li>
+{%endblock%}
 {% block main %}
-<div class="col-lg-8 col-xl-6 offset-lg-1 offset-xl-2 m-auto">
+<div class="col-lg-8 col-xl-6 offset-lg-1 offset-xl-2 m-auto" style="min-height: 400px">
     <div class="intro disp">
         <a {% if object.url %}href="{{object.url}}"{%endif%}}><h1 class="text-center disp_head"><strong>{{object.title}}</h1></a>
+
         <p class="text-center m-auto"><span class="date view_ln_2 disp_date"> {{object.date|date:'d/m/Y'}} </span></p>
-        <br>
+
         <div>
-        <h2 class="text-center text-uppercase" id="proj_details">Details</h2>
-        <p class="align-content-center" id="proj_desc">{{object.description}}</p>
+            <p class="align-content-center" id="proj_desc" style="font-size: 3vh; line-height: 30px">
+                <br>{{object.description}}
+            </p>
         </div>
     </div>
 </div>

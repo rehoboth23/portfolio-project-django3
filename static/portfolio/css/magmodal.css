@@ -1,0 +1,54 @@
+.modal_holder {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 199;
+}
+
+.mymodal {
+    position: fixed;
+    height: 75%;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: scroll;
+}
+.card-body {
+    height: auto;
+    overflow: scroll;
+}
+@media (max-width: 580px) {
+    .mymodal {
+        max-height: 550px;
+    }
+}
+.modal_holder button {
+    margin-right: 25px;
+    margin-top: 7px;
+    z-index: 99;
+}
+.modal_holder button:hover {
+    background-color: red;
+}
+.mymodal .imgHolder img {
+    max-height: 200px;
+    min-height: 45px;
+}
+.mymodal .imgHolder {
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+img {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    font-size: 2vw;
+}
+.mymodal .row {
+    height: auto;
+}

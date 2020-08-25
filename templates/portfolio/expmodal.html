@@ -1,0 +1,100 @@
+{%load static%}
+<section class="modal_holder" id="exp_modal" >
+        <div class="row justify-content-end">
+            <button class="btn-primary roundBtn exit_btn">X</button>
+        </div>
+        <div class="carousel slide" data-ride="carousel" id="experienceCarousel">
+                <div class="carousel-inner">
+                    {%with object=first_exp%}
+                    <div id="ex{{object}}" class="carousel-item active mymodal" style="z-index: 2">
+                        <div class="mymodal card border-success mb-3">
+                          <div class="card-header bg-transparent border-success">{{object}}</div>
+                          <div class="card-body text-success">
+                            <div class="inline-group">
+                                <p><b>Role: </b>{{object.position}}</p>
+                            </div>
+                            <b>Job Description</b>
+                            <p>{{object.role_description}}</p>
+                          </div>
+                          <div class="card-footer bg-transparent border-success">{{object.start}} - {{object.end|default_if_none:"Present"}}</div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(document).ready(function (){
+                            const pre = "{{object}}".toString()
+                            const obj = document.getElementById("ex"+pre)
+                            const bfr = document.createElement("div")
+                            const id = "ex"+pre+"bfr"
+                            bfr.setAttribute("id", id)
+
+                            bfr.style.backgroundImage = "url({% static object.logo %})"
+                            bfr.style.backgroundRepeat = "no-repeat"
+                            bfr.style.backgroundSize = "contain"
+                            bfr.style.opacity = "0.5"
+                            bfr.style.position = "fixed"
+                            bfr.style.height = "800px"
+                            bfr.style.width = "800px"
+                            bfr.style.margin = "0 0 0 0%"
+                            bfr.style.display = "none"
+                            bfr.style.zIndex = "1"
+
+                            $(bfr).addClass("mymodal")
+                            obj.before(bfr)
+                        })
+                        $("#experienceCarousel").on('slid.bs.carousel', function () {
+                             slideLogo()
+                            })
+                    </script>
+                    {%endwith%}
+                    {%for object in experiences%}
+                    <div id="ex{{object}}" class="carousel-item mymodal" style="z-index: 2">
+                        <div class="mymodal card border-success mb-3">
+                          <div class="card-header bg-transparent border-success">{{object}}</div>
+                          <div class="card-body text-success">
+                            <div class="inline-group">
+                                <p><b>Role: </b>{{object.position}}</p>
+                            </div>
+                            <b>Job Description</b>
+                            <p>{{object.role_description}}</p>
+                          </div>
+                          <div class="card-footer bg-transparent border-success">{{object.start}} - {{object.end|default_if_none:"Present"}}</div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(document).ready(function (){
+                            const pre = "{{object}}".toString()
+                            const obj = document.getElementById("ex"+pre)
+                            const bfr = document.createElement("div")
+                            const id = "ex"+pre+"bfr"
+                            bfr.setAttribute("id", id)
+
+                            bfr.style.backgroundImage = "url({% static object.logo %})"
+                            bfr.style.backgroundRepeat = "no-repeat"
+                            bfr.style.backgroundSize = "contain"
+                            bfr.style.opacity = "0.5"
+                            bfr.style.position = "fixed"
+                            bfr.style.height = "800px"
+                            bfr.style.width = "800px"
+                            bfr.style.margin = "0 0 0 0%"
+                            bfr.style.display = "none"
+                            bfr.style.zIndex = "1"
+
+                            $(bfr).addClass("mymodal")
+                            obj.before(bfr)
+                        })
+                        $("#experienceCarousel").on('slid.bs.carousel', function () {
+                             slideLogo()
+                          })
+                    </script>
+                    {%endfor%}
+                </div>
+                <a class="carousel-control-prev" href="#experienceCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon control-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#experienceCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon control-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+    </section>

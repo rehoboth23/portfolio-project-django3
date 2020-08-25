@@ -3,7 +3,6 @@ from django.views import generic
 from .forms import Signup_Form, Create_Todo_Form, Signin_Form
 from .models import Todo
 from django.contrib.auth import login, authenticate, logout
-from datetime import date
 
 
 # Create your views here.

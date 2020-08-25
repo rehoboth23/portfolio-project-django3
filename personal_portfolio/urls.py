@@ -21,7 +21,6 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('portfolio.urls')),
-    path('blog/', include('blog.urls')),
     path('todo/', include('todo.urls')),
     path('shorten/', include('shorter.urls')),
 ]

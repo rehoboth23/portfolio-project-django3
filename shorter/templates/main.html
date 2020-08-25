@@ -7,6 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Montserrat:wght@500&family=Oleo+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" href="{% static 'shorten/images/urlen.ico' %}">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
@@ -20,9 +21,10 @@
 
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" style = "background-color: #f4f6ff;">
-        <a href = ""><img class = "img-head" src="{% static 'shorten/images/logo2.png' %}" width="100" height="100" class="d-inline-block align-center " alt="" loading="lazy"></a>
+        <a href = ""><img src="{% static 'shorten/images/urlen.ico' %}" width="80" height="80"
+        class="d-inline-block align-center img-head" alt="" loading="lazy"></a>
         <a class="navbar-brand" href="#">
-          urlen
+            urlen
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -30,13 +32,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Resources</a>
+              <a class="nav-link" href="#resources">Resources</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+              <a class="nav-link" href="#contact-us">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -49,7 +51,7 @@
   <section id = "body-top">
     <div class="row">
       <div class="col-lg-6 ">
-        <h1>Need Shorter URLs?</h1>
+        <h1 class = "heading-text">Need Shorter URLs?</h1>
         <p>Leverage our tool to shorten and provide URLs that are easier to remember</p>
 
         <div class="output">
@@ -67,13 +69,13 @@
         </div>
 
 
-        {% if a %}
+          {% if a %}
                <form class="form-inline">
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">Shortened URL:</span>
                     </div>
-                    <input id="shortUrla" type="text" class="form-control" aria-label="Large" value = "localhost:8000/shorten/{{a.short_url}}" aria-describedby="inputGroup-sizing-sm">
+                    <input id="shortUrla" type="text" class="form-control" aria-label="Large" value = "https://rehoboth23.pythonanywhere.com/shorten/{{a.short_url}}" aria-describedby="inputGroup-sizing-sm" readonly>
                   </div>
                     <button id="copyBtna" class="btn btn-outline-primary" type="button"><i class="fa fa-copy"></i>Copy</button>
                 </form>
@@ -84,60 +86,67 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">Shortened URL:</span>
                   </div>
-                  <input id="shortUrlb" type="text" class="form-control" aria-label="Large" value = "localhost:8000/shorten/{{b.short_url}}" aria-describedby="inputGroup-sizing-sm">
+                  <input id="shortUrlb" type="text" class="form-control" aria-label="Large" value = "https://rehoboth23.pythonanywhere.com/shorten/{{b.short_url}}" aria-describedby="inputGroup-sizing-sm" readonly>
                 </div>
                   <button id="copyBtnb" class="btn btn-outline-primary" type="button"><i class="fa fa-copy"></i> Copy</button>
               </form>
           {% endif %}
       </div>
 
-
-<div class="col-lg-6  " >
-    <img class = "major-img" src="{% static 'shorten/images/major.png' %}" alt="connected-img">
-</div>
-
+    <div class="col-lg-6  " >
+        <img class = "major-img" src="{% static 'shorten/images/major.png' %}" alt="connected-img">
     </div>
 
-
+    </div>
   </section>
-  <section id = "about">
-    <h1 class = "team">Meet the Team!</h1>
+
+  <section id = "about" style="background-color: white; padding: 0 7% 0 7%; text-align: center;">
+    <h1 class = "team" style="font-family: 'Montserrat', sans-serif; font-weight: bold; text-align: center; padding-bottom: 50px;">
+        Meet the Team!</h1>
     <div class="row">
       <div class="col-lg-6">
-        <img class = "img-prof" src="{% static 'shorten/images/alams.png' %}" alt="img-karry">
+        <img class = "img-prof" src="{% static 'shorten/images/alams.png' %}" alt="img-karry" style="width: 200px; height: 200px; padding-bottom: 10px;">
         <p>B.Sc Computer Engineering, Computer Science</p>
         <p>Johns Hopkins University '23'</p>
       </div>
       <div class="col-lg-6">
-        <img class = "img-prof" src="{% static 'shorten/images/kc.png' %}" alt="img-kc">
+        <img class = "img-prof" src="{% static 'shorten/images/kc.png' %}" alt="img-kc" style="width: 200px; height: 200px; padding-bottom: 10px;">
         <p>B.Sc Computer Science, Biology</p>
         <p>Dartmouth College '23'</p>
       </div>
-      <h1 class = "about-text">"urlen is a url shortner built using the django framework. It is built on a two part Model Base logic coupled with One to One relationship."</h1>
+      <h1 class = "about-text" style="font-family: 'Montserrat', sans-serif; font-size: 3rem; font-weight: lighter; text-align: center; padding-bottom: 125px; margin-bottom: 50px;">
+          "urlen is a url shortner built using the Django Framework and AJAX. It uses a two part model base coupled with One to One relationship and an SQLite database"</h1>
 
     </div>
   </section>
 
   <section id = "resources">
     <h1 class = "res-text"><span><</span>git Repository/></h1>
-
     <div class="input-grp form_2 mb-3" >
-    <input type="text" class="form-control " placeholder="Link" aria-label="Link" aria-describedby="button-addon2" readonly
-    value="https://github.com/rehoboth23/urlen.git" id="gitHolder">
-    <div class="input-group-append">
-      <button class="btn btn-outline-secondary btn-new" type="button" id="gitRepo"><i class="fas fa-copy fa-1x "></i> Copy</button>
+    <div class="row">
+        <div class="col-8 col-sm-12">
+            <input type="text" class="form-control " placeholder="Link" aria-label="Link" aria-describedby="button-addon2" readonly
+            value="https://github.com/rehoboth23/urlen.git" id="gitHolder">
+        </div>
+        <div class="input-group-append col-4 col-sm-12">
+            <button class="btn btn-outline-secondary btn-new" type="button" id="gitRepo"><i class="fas fa-copy fa-1x "></i> Copy</button>
+        </div>
     </div>
   </div>
 </section>
 
-<section id = "contact-us" style="padding: 0 7% 0 7%; text-align: center; padding-bottom: 5%; align-item: center">
-  <h1 class = "team" style="font-family: 'Montserrat', sans-serif; font-weight: bold; text-align: center; padding-bottom: 50px;">
+
+<section id = "contact-us">
+  <h1 class = "team">
       You're always welcome!</h1>
-  <p class = "contact" styles="padding-bottom: 25px;font-size: 1rem;">
+  <p class = "contact">
       If you have any ideas, suggestions, or would like to contribute to this project in anyway, simply message us.<br>We'd be happy to respond.</p>
-  <button type="button" class="btn btn-secondary btn-lg">
-      <i class="far fa-envelope"></i> MESSAGE US</button>
+  <a type="button" class="btn btn-secondary btn-lg" href="mailto: okorie.23@dartmouth.edu">
+      <i class="far fa-envelope"></i> Rehoboth Okorie</a>
+  <a type="button" class="btn btn-secondary btn-lg" href="mailto: kaalams234@gmail.com">
+      <i class="far fa-envelope"></i> Oyeinkare Alamieyeseigha</a>
 </section>
+
 
 
   <!-- Optional JavaScript -->
@@ -145,8 +154,8 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  <script src="{%static 'shorten/js/git.js' %}"></script>
-<script src="{%static 'shorten/js/copy.js' %}"></script>
+  <script src="{% static 'shorten/copy2clip.js' %}"></script>
+  <script src="{% static 'shorten/git.js' %}"></script>
 </body>
 
 </html>
