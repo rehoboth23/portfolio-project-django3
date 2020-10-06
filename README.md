@@ -8,8 +8,8 @@ projects display and access and a personal blog.
 **source bin/activate**
 **mkdir** src    
 **cd** src  
-**git** clone [this repository link]
-**pip** install django  
+**git clone** [this repository link]
+**pip install  -r requorements.txt** 
 **python manage.py makemigrations**  
 **python manage.py migrate**   
   
