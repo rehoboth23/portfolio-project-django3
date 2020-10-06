@@ -2,6 +2,9 @@
 A generic portfolio website with accommodations for a resume,  
 projects display and access and a personal blog.
 
+Content is dynamic and is managed from the backend to facilitate expansion and easy management.  
+
+
 #
 http://rehoboth23.pythonanywhere.com/
 #
