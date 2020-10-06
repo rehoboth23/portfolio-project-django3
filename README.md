@@ -12,8 +12,8 @@ http://rehoboth23.pythonanywhere.com/
 **source bin/activate**
 **mkdir** src    
 **cd** src  
-**git clone** [this repository link]
-**pip install  -r requorements.txt** 
+**git clone** [this repository link]  
+**pip install  -r requorements.txt**   
 **python manage.py makemigrations**  
 **python manage.py migrate**   
   
